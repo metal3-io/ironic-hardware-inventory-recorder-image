@@ -3,4 +3,5 @@ Provides an container which containers the ironic-python-agent
 launched in a mode where introspection data is periodically
 transmitted to an attached ironic-inspector instance.
 
-ironic-inspector is located via Multicast DNS.
+The ironic-inspector is service located via mdns name
+*baremetal-introspection._openstack._tcp.local.*
