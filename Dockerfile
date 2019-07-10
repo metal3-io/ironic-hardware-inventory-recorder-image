@@ -1,7 +1,7 @@
 FROM docker.io/centos:centos7
 
 RUN yum install -y python-requests && \
-    curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/tripleo_repos/main.py | python - current-tripleo && \
+    curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/tripleo_repos/main.py | python - current && \
     yum update -y && \
     yum install -y openstack-ironic-python-agent lshw smartmontools && \
     yum clean all
