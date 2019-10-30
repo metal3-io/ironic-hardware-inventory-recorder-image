@@ -6,6 +6,6 @@ RUN yum install -y python-requests && \
     yum install -y openstack-ironic-python-agent lshw smartmontools iproute python-hardware && \
     yum clean all
 
-# NOTE(TheJulia/juliakreger): this command defaults to using multicast
-# dns lookups.
-ENTRYPOINT ["/usr/bin/ironic-collect-introspection-data", "--introspection_daemon"]
+COPY ./runironic-agent.sh /bin/runironic-agent
+
+ENTRYPOINT ["/bin/runironic-agent"]
