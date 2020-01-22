@@ -1,11 +1,16 @@
-FROM docker.io/centos:centos7
+FROM docker.io/centos:centos8
 
-RUN yum install -y python-requests && \
-    curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/tripleo_repos/main.py | python - -b train current-tripleo && \
-    yum update -y && \
-    yum install -y openstack-ironic-python-agent lshw smartmontools iproute python-hardware mdadm biosdevname ipmitool && \
-    yum clean all
+RUN dnf install -y python3 python3-requests && \
+    curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/tripleo_repos/main.py | python3 - -b train current && \
+    dnf install -y epel-release 'dnf-command(config-manager)' && \
+    dnf config-manager --set-enabled PowerTools && \
+    dnf update -y && \
+    dnf install -y openstack-ironic-python-agent lshw smartmontools \
+      iproute python3-hardware-detect mdadm biosdevname ipmitool && \
+    dnf clean all && \
+    rm -rf /var/cache/{yum,dnf}/*
 
 COPY ./runironic-agent.sh /bin/runironic-agent
 
 ENTRYPOINT ["/bin/runironic-agent"]
+
