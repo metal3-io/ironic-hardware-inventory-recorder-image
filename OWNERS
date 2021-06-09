@@ -5,6 +5,11 @@ approvers:
  - derekhiggins
  - dhellmann
  - dtantsur
+ - elfosardo
  - hardys
- - juliakreger
- - russellb
+
+reviewers:
+ - iurygregory
+ - maelk
+ - stbenjam
+ - zaneb
