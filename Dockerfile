@@ -1,7 +1,7 @@
 FROM docker.io/centos:centos8
 
 RUN dnf install -y python3 python3-requests && \
-    curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/tripleo_repos/main.py | python3 - -b master --no-stream current-tripleo && \
+    curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/plugins/module_utils/tripleo_repos/main.py | python3 - -b master --no-stream current-tripleo && \
     dnf upgrade -y && \
     dnf install -y openstack-ironic-python-agent lshw smartmontools \
       iproute python3-hardware-detect mdadm biosdevname ipmitool && \
