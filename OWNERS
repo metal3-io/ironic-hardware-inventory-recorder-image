@@ -5,10 +5,12 @@ approvers:
  - derekhiggins
  - dtantsur
  - elfosardo
- - hardys
 
 reviewers:
  - iurygregory
  - maelk
  - stbenjam
  - zaneb
+
+emeritus_approvers:
+ - hardys
