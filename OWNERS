@@ -5,12 +5,16 @@ approvers:
  - derekhiggins
  - dtantsur
  - elfosardo
+ - kashifest
 
 reviewers:
  - iurygregory
- - maelk
+ - Rozzii
  - stbenjam
  - zaneb
 
 emeritus_approvers:
  - hardys
+
+emeritus_reviewers:
+ - maelk
