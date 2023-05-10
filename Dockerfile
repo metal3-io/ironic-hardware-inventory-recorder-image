@@ -1,4 +1,6 @@
-FROM quay.io/centos/centos:stream8
+ARG BASE_IMAGE=quay.io/centos/centos:stream9
+
+FROM $BASE_IMAGE
 
 RUN dnf install -y python3 python3-requests && \
     curl https://raw.githubusercontent.com/openstack/tripleo-repos/master/plugins/module_utils/tripleo_repos/main.py | python3 - -b master current-tripleo && \
