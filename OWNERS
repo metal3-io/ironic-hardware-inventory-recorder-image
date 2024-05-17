@@ -1,20 +1,14 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
- - bfournie
- - derekhiggins
- - dtantsur
- - elfosardo
- - kashifest
+- ironic-hardware-inventory-recorder-image-maintainers
 
 reviewers:
- - iurygregory
- - Rozzii
- - stbenjam
- - zaneb
+- ironic-hardware-inventory-recorder-image-maintainers
+- ironic-hardware-inventory-recorder-image-reviewers
 
 emeritus_approvers:
- - hardys
+- hardys
 
 emeritus_reviewers:
- - maelk
+- maelk
