@@ -1,0 +1,15 @@
+# See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
+
+aliases:
+  ironic-hardware-inventory-recorder-image-maintainers:
+  - bfournie
+  - derekhiggins
+  - dtantsur
+  - elfosardo
+  - kashifest
+
+  ironic-hardware-inventory-recorder-image-reviewers:
+  - iurygregory
+  - Rozzii
+  - stbenjam
+  - zaneb
